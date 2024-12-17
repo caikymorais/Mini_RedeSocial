@@ -4,11 +4,10 @@ function mostrarFormulario() {
 
 function publicarPost() {
   const postContent = document.getElementById('new-post-content').value;
-  if (postContent) {
-    alert("Post publicado com sucesso: " + postContent);
-    document.getElementById('new-post-content').value = ''; // Limpar o conteúdo
-    document.getElementById('new-post-form').style.display = 'none'; // Fechar o formulário
+  if (postContent.length > 0) {
+    alert("Post publicado: " + postContent);
+    document.getElementById('new-post-content').value = ''; // Limpa o campo após publicar
   } else {
-    alert("Por favor, escreva algo para publicar.");
+    alert("O post não pode estar vazio!");
   }
 }
