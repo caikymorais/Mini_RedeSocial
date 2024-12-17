@@ -1,21 +1,24 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Rede Social</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Verifique se o caminho está correto -->
 </head>
+
 <body>
   <header>
     <h1>Mini Rede Social</h1>
   </header>
+
   <nav>
     <a href="#">Feed</a>
     <a href="perfil.html">Meu Perfil</a>
     <a href="login.html">Login</a>
   </nav>
+
   <main id="feed">
     <h2>Feed de Posts</h2>
     <div class="post">
@@ -26,27 +29,30 @@
       <div class="post-author">@usuario2</div>
       <div class="post-content">Praticando HTML e CSS para criar uma rede social simples.</div>
     </div>
-<!-- Formulário de novo post -->
-<div id="new-post-form" style="display: none;">
-  <textarea id="new-post-content" placeholder="Escreva seu post aqui..." maxlength="280"></textarea>
-  <button class="button" onclick="publicarPost()">Publicar</button>
-</div>
-<button class="button" onclick="mostrarFormulario()">Criar Novo Post</button>
-
+    
+    <!-- Formulário de novo post -->
+    <div id="new-post-form" style="display: none;">
+      <textarea id="new-post-content" placeholder="Escreva seu post aqui..." maxlength="280"></textarea>
+      <button class="button" onclick="publicarPost()">Publicar</button>
+    </div>
+    <button class="button" onclick="mostrarFormulario()">Criar Novo Post</button>
   </main>
-  <script src="js/scripts.js"></script>
+
+  <!-- Criar Novo Post -->
+  <main id="create-post">
+    <h2>Criar Novo Post</h2>
+    <textarea id="new-post-content" placeholder="Escreva seu post aqui..." maxlength="280"></textarea>
+    <div id="char-count">0/280 caracteres</div>
+    <button id="preview-button">Ver Preview</button>
+
+    <div id="post-preview" style="display:none;">
+      <h3>Preview:</h3>
+      <div id="preview-content"></div>
+      <button id="publish-button">Publicar</button>
+    </div>
+  </main>
+
+  <script src="js/scripts.js"></script> <!-- Link para o JS -->
 </body>
+
 </html>
-=======
-<div id="create-post">
-  <h2>Criar Novo Post</h2>
-  <textarea id="new-post-content" placeholder="Escreva seu post aqui..." maxlength="280"></textarea>
-  <div id="char-count">0/280 caracteres</div>
-  <button id="preview-button">Ver Preview</button>
-  <div id="post-preview" style="display:none;">
-    <h3>Preview:</h3>
-    <div id="preview-content"></div>
-    <button id="publish-button">Publicar</button>
-  </div>
-</div>
->>>>>>> feature_create
