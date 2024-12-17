@@ -1,63 +1,190 @@
-/* Estilo básico */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #3498db;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-}
-
-#char-count {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#preview-button, #publish-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-#preview-button:hover, #publish-button:hover {
-  background-color: #2980b9;
-}
-
-#post-preview {
-  margin-top: 20px;
-}
-
-#preview-content {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: white;
-  margin-top: 10px;
-}
-
-button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
-}
+/* Reset básico para garantir que o layout seja consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #1da1f2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  /* Navegação */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  nav a:hover {
+    color: #1da1f2;
+  }
+  
+  /* Seção principal - Feed de posts */
+  main#feed {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Post individual */
+  .post {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-author {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .post-content {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Botão do feed */
+  .button {
+    display: inline-block;
+    background-color: #1da1f2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0c85d0;
+  }
+  
+  /* Formulário de novo post */
+  #new-post-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #new-post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #new-post-form button {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+  
+  /* Formulário de criação de novo post */
+  #create-post {
+    background-color: white;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #create-post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  #create-post textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #char-count {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  #preview-button, #publish-button {
+    background-color: #1da1f2;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #preview-button:hover, #publish-button:hover {
+    background-color: #0c85d0;
+  }
+  
+  #post-preview {
+    margin-top: 15px;
+  }
+  
+  #post-preview h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #preview-content {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  /* Ajustes para responsividade */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      margin: 5px 0;
+    }
+  
+    main#feed, #create-post {
+      padding: 15px;
+    }
+  }
+  
