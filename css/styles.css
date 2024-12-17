@@ -4,27 +4,23 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 header {
   background-color: #1da1f2;
   color: white;
   padding: 15px;
   text-align: center;
 }
-
 nav {
   display: flex;
   justify-content: space-around;
   background-color: #ddd;
   padding: 10px 0;
 }
-
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
-
 main {
   max-width: 800px;
   margin: 20px auto;
@@ -33,7 +29,6 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .post {
   background: #fff;
   margin-bottom: 20px;
@@ -41,12 +36,10 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .post-author {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .button {
   display: inline-block;
   background-color: #1da1f2;
@@ -59,19 +52,6 @@ main {
   font-size: 14px;
   cursor: pointer;
 }
-
 .button:hover {
   background-color: #0c85d0;
-}
-
-/* Estilo para o formulário de criação de post */
-#new-post-form {
-  margin-top: 20px;
-}
-#new-post-form textarea {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
